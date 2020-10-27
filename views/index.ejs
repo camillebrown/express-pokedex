@@ -1,16 +1,25 @@
 <div class="container">
-  <h1 class="text-center">The Original 151 Pokemon</h1>
-  <p class="text-center">
-    <a href="/pokemon">Favorites</a>
-  </p>
 
-  <% pokemon.forEach(function(pokemon) { %>
-    <div class="well">
-      <h2><%= pokemon.name %></h2>
-      <form method="POST" action="/pokemon">
-        <input hidden type="text" name="name" value="<%= pokemon.name %>">
-        <button class="btn btn-primary" type="submit">Add to Favorite Pokemon</button>
-      </form>
-    </div>
-  <% }); %>
+    <h1 class="text-center">The Original 151 <br><img src="https://cdn.worldvectorlogo.com/logos/pokemon-23.svg" alt="pokemon-font" width="50%"></h1>
+    <h3 class="text-center">
+      <a href="/pokemon" class="text-center" id="favs-link">Check Out My Favorites</a>
+    </h3>
+  
+  <div class="pokes">
+    <% pokemon.forEach(function(pokemon) { %>
+      <div class="well">
+        <h2><%= pokemon.name %></h2>
+        <% let url = pokemon.url %>
+        <!-- //splice url to isolate the id -->
+        <% let pokeIndex = url.slice(34, url.length-1) %>
+        <!-- <h2>Index: <%=pokeIndex%></h2> -->
+        <img class='img' src=<%=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeIndex}.png`%> width="200">
+        <a href="/pokemon/<%= pokemon.name %>" class="learn-btn" id="btn">Learn More</a>
+        <form method="POST" action="/pokemon" id="form">
+          <input hidden type="text" name="name" value="<%= pokemon.name %>">
+          <button class="btn btn-primary" id="btn" type="submit">Favorite this Pokemon</button>
+        </form>
+      </div>
+      <% }); %>
+  </div>  
 </div>

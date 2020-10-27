@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    background: #ff0000;
+}
+
+#btn{
+    background:#3b4cca;
+    color: white;
+    border: none;
+}
+
+.learn-btn{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 3px;
+    padding: 6px;
+    width: 52%;
+    text-decoration: none;
+}
+
+#btn:hover, #favs-link:hover{
+    background:rgb(93, 147, 238);
+    color: white;
+    border: none;
+}
+
+.text-center{
+    color: white;
+    text-align: center;
+}
+
+#favs-link{
+    background:#3b4cca;
+    color: white;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border: none;
+    border-radius: 3px;
+    padding: 6px;
+    width: 52%;
+    text-decoration: none;
+}
+
+.img{
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.pokes, .poke-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.well{
+    width: 32%;
+    margin-bottom: 2%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+  
+.poke-name{
+    width: 30%;
+    height: 400px;
+    margin-bottom: 2%;
+    background: white;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+    top: 50%;
+}
+
+.poke-name:nth-child(4n) {
+    width: 100%;
+    align-content: center;
+}
+
+.poke-container{
+    padding: 3%;
+}
+
+.headings{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.headings-ab{
+    font-weight: 900;
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+ul{
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+    color: #3b4cca;
+}
+
+li.moves{
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 25px;
+    display: inline;
+    margin: 15px;
+    padding: 0px;
+    color: #3b4cca;
+    display: block;
+    flex: 0 1 auto;
+}
+
+ul#moves{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0;
+    margin-left: 10%;
+    padding: 10;
+}
+
+.pokemon-name{
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+}
+
+p#fav-pokes{
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline;
+    margin: 25px;
+    padding: 0px;
+    color: #3b4cca; 
+}
+
+ul#fav-pokes{
+    width: 80%;
+    margin-left: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+
+
+
+

@@ -1,0 +1,47 @@
+<h1 class='pokemon-name'> Information about Pokemon ID: <%=pokemon.id%> </h1>
+
+<div class="poke-container">
+    <div class="poke-name">
+        <h2 class="headings"> Name: <%= pokemon.name %></h2>
+        <img class='img' src=<%=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`%> width="200"> 
+        <br><p id="fav-pokes">Weight: <%=pokemon.weight%></p>
+        <p id="fav-pokes" >Height: <%=pokemon.height%></p>
+    </div>
+    <div class="poke-name">
+        <h2 class="headings-ab"> Abilities</h2>
+        <ul id="fav-pokes">
+            <% for(i=0;i<abilities.length;i++){ %>
+                <li><%= pokemon.abilities[i].ability.name %></li>
+            <% } %>
+        </ul>
+        <h2 class="headings-ab"> Types</h2>
+        <ul id="fav-pokes">
+            <% for(i=0;i<pokemon.types.length;i++){ %>
+                <li><%= pokemon.types[i].type.name %></li>
+            <% } %>
+        </ul>
+    </div>
+    <div class="poke-name">
+        <h2 class="headings-ab"> Stats</h2>
+        <ul id="fav-pokes">
+            <% for(i=0;i<pokemon.stats.length;i++){ %>
+                <li><%= pokemon.stats[i].stat.name %>: <%= pokemon.stats[i].base_stat %></li>
+            <% } %>
+        </ul>
+    </div>
+    <div class="poke-name moves">
+        <h2 class="headings"> Moves</h2>
+        <ul id="moves">
+            <% if(pokemon.moves.length >= 20) { %>
+                <% console.log(pokemon.moves.length) %>
+                <% for(i=0;i<20;i++){ %>
+                    <li class="moves"><%= pokemon.moves[i].move.name %></li>
+                <% } %>
+            <% } else { %>
+                <% for(i=0;i<pokemon.moves.length;i++){ %>
+                    <li class="moves"><%= pokemon.moves[i].move.name %></li>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
+</div>  
